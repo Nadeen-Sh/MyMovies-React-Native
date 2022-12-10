@@ -9,6 +9,7 @@ export default StyleSheet.create({
     fontWeight: themeStyle.font.FONT_WEIGHT_MEDIUM,
     lineHeight: 27,
     color: themeStyle.colors.PRIMARY_COLOR,
+    paddingLeft: 30,
   },
   movieTitleContainer: {
     display: 'flex',
@@ -22,5 +23,21 @@ export default StyleSheet.create({
     position: 'absolute',
     top: 150,
     left: 45,
+  },
+  movieDetails: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  detailContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingTop: 40,
+  },
+  iconText: {
+    color: '#92929D',
+    paddingLeft: 5,
+    paddingRight: 5,
   },
 });

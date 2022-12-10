@@ -1,11 +1,32 @@
 import * as React from 'react';
-import {View, Text, ScrollView} from 'react-native';
+import {View, Text, Image, ScrollView} from 'react-native';
 
-const SavedMovies = ({navigation}) => {
+import styles from './SavedMovieStyle';
+
+const SavedMovies = () => {
+  const [result, setResult] = React.useState([]);
+
   return (
     <ScrollView>
-      <View>
-        <Text>Saved</Text>
+      <View style={styles.pageContainer}>
+        {result.length !== 0 ? (
+          <View></View>
+        ) : (
+          <View style={styles.noResult}>
+            <Image
+              source={require('../../assests/watchList.png')}
+              style={{
+                height: 86,
+                width: 86,
+                color: 'red',
+              }}
+            />
+            <Text style={styles.noResultText}>There is no movie yet!</Text>
+            <Text style={styles.noSaved}>
+              Find your movie by Type title, categories, years, etc
+            </Text>
+          </View>
+        )}
       </View>
     </ScrollView>
   );

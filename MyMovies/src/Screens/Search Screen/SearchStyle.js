@@ -73,7 +73,6 @@ export default StyleSheet.create({
   noSearch: {
     fontFamily: 'Montserrat',
     fontSize: themeStyle.font.FONT_SIZE_SMALL,
-
     textAlign: 'center',
     width: 200,
     letterSpacing: 0.12,
@@ -81,6 +80,6 @@ export default StyleSheet.create({
     fontStyle: 'normal',
     paddingTop: 20,
     lineHeight: 19,
-    color: ' #92929D',
+    color: '#92929D',
   },
 });

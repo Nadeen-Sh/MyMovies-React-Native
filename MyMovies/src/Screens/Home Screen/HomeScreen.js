@@ -58,19 +58,31 @@ const HomeScreen = ({navigation}) => {
           })}
         </ScrollView>
 
-        <ScrollView horizontal={true}>
+        <ScrollView horizontal={true} style={styles.ScrollViewTab}>
           <Tab
             value={index}
             onChange={e => setIndex(e)}
             indicatorStyle={{
-              backgroundColor: 'white',
+              backgroundColor: 'grey',
               height: 3,
             }}
-            variant="primary">
-            <Tab.Item title="Now playing" titleStyle={{fontSize: 12}} />
-            <Tab.Item title="Upcomping" titleStyle={{fontSize: 12}} />
-            <Tab.Item title="Top rating" titleStyle={{fontSize: 12}} />
-            <Tab.Item title="Popular" titleStyle={{fontSize: 12}} />
+            variant="default">
+            <Tab.Item
+              title="Now playing"
+              titleStyle={{fontSize: 12, color: 'white'}}
+            />
+            <Tab.Item
+              title="Upcomping"
+              titleStyle={{fontSize: 12, color: 'white'}}
+            />
+            <Tab.Item
+              title="Top rated"
+              titleStyle={{fontSize: 12, color: 'white'}}
+            />
+            <Tab.Item
+              title="Popular"
+              titleStyle={{fontSize: 12, color: 'white'}}
+            />
           </Tab>
         </ScrollView>
 
@@ -81,8 +93,8 @@ const HomeScreen = ({navigation}) => {
                 <Card
                   key={index}
                   image={item.image}
-                  height={145.92}
-                  width={100}
+                  height={155.92}
+                  width={110}
                   raduis={16}
                   onClick={() =>
                     navigation.navigate('details', {id: item.imdbID})

@@ -14,7 +14,7 @@ export default StyleSheet.create({
     fontFamily: 'Poppins',
     fontStyle: 'normal',
     lineHeight: 27,
-    width: 327,
+    width: 350,
   },
   titleContainer: {
     height: 27,
@@ -22,7 +22,7 @@ export default StyleSheet.create({
   },
   searchbar: {
     Height: 42,
-    width: 327,
+    width: 350,
     borderRadius: 16,
     backgroundColor: themeStyle.background.BACKGROUND_COLOR_LIGHT,
     marginTop: 24,
@@ -37,8 +37,11 @@ export default StyleSheet.create({
     marginTop: 12,
   },
   ScrollView: {
-    height: 300,
-    width: 327,
+    height: 260,
+    width: 350,
+  },
+  ScrollViewTab: {
+    width: 350,
   },
   numberCard: {
     position: 'absolute',
