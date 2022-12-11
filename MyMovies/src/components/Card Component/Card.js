@@ -2,16 +2,6 @@ import * as React from 'react';
 import {View, TouchableOpacity, Image, Text} from 'react-native';
 import styles from './CardStyle';
 
-class CardProps {
-  height;
-  width;
-  raduis;
-  image;
-  onClick;
-  key;
-  num;
-}
-
 const Card = CardProps => {
   const {height, width, raduis, image, onClick, key, num} = CardProps;
 

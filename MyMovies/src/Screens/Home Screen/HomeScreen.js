@@ -14,10 +14,12 @@ import Card from '../../components/Card Component/Card';
 
 const HomeScreen = ({navigation}) => {
   const [search, setSearch] = React.useState('');
-  const [page, setPage] = React.useState('first');
   const [index, setIndex] = React.useState(0);
 
   const sorted = movies.slice().sort((a, b) => b.imdbRating - a.imdbRating);
+  const upcoming = movies.filter(item => {
+    return item.ComingSoon;
+  });
 
   return (
     <ScrollView>
@@ -41,7 +43,7 @@ const HomeScreen = ({navigation}) => {
         </View>
 
         <ScrollView horizontal={true} style={styles.ScrollView}>
-          {sorted.map((item, index) => {
+          {sorted.slice(0, 5).map((item, index) => {
             return (
               <Card
                 key={index}
@@ -89,6 +91,27 @@ const HomeScreen = ({navigation}) => {
         {index === 0 && (
           <View style={styles.containerCards}>
             {movies.map((item, index) => {
+              if (!item.ComingSoon) {
+                return (
+                  <Card
+                    key={index}
+                    image={item.image}
+                    height={155.92}
+                    width={110}
+                    raduis={16}
+                    onClick={() =>
+                      navigation.navigate('details', {id: item.imdbID})
+                    }
+                  />
+                );
+              }
+            })}
+          </View>
+        )}
+
+        {index === 1 && (
+          <View style={styles.containerCards}>
+            {upcoming.map((item, index) => {
               return (
                 <Card
                   key={index}
@@ -105,9 +128,29 @@ const HomeScreen = ({navigation}) => {
           </View>
         )}
 
+        {index === 3 && (
+          <View style={styles.containerCards}>
+            {movies.map((item, index) => {
+              if (item.popular) {
+                return (
+                  <Card
+                    key={index}
+                    image={item.image}
+                    height={155.92}
+                    width={110}
+                    raduis={16}
+                    onClick={() =>
+                      navigation.navigate('details', {id: item.imdbID})
+                    }
+                  />
+                );
+              }
+            })}
+          </View>
+        )}
         {index === 2 && (
           <View style={styles.containerCards}>
-            {sorted.map((item, index) => {
+            {sorted.slice(0, 6).map((item, index) => {
               return (
                 <Card
                   key={index}

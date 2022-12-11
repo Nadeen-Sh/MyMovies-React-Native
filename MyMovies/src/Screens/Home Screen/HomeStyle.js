@@ -39,6 +39,7 @@ export default StyleSheet.create({
   ScrollView: {
     height: 260,
     width: 350,
+    paddingTop: 10,
   },
   ScrollViewTab: {
     width: 350,
