@@ -18,7 +18,11 @@ const SearchScreen = ({navigation}) => {
   const [result, setResult] = React.useState([]);
   const searchMovie = () => {
     const filterd = movies.filter(item => {
-      return item.Title.toLowerCase().includes(search.toLowerCase());
+      return (
+        item.Title.toLowerCase().includes(search.toLowerCase()) ||
+        item.Genre.toLowerCase().includes(search.toLowerCase()) ||
+        item.Year.includes(search)
+      );
     });
 
     setResult(filterd);
