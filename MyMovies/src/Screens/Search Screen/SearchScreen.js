@@ -11,21 +11,27 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import movies from '../../Film';
 import styles from './SearchStyle';
 import Card from '../../components/Card Component/Card';
+import AppBarComponent from '../../components/AppBar Component/AppBarComponent';
 
-const SearchScreen = () => {
+const SearchScreen = ({navigation}) => {
   const [search, setSearch] = React.useState('');
   const [result, setResult] = React.useState([]);
   const searchMovie = () => {
     const filterd = movies.filter(item => {
-      return item.Title.includes(search);
+      return item.Title.toLowerCase().includes(search.toLowerCase());
     });
 
     setResult(filterd);
   };
-  console.log(result.length);
+
   return (
     <ScrollView>
       <View style={styles.pageContainer}>
+        <AppBarComponent
+          icon="exclamation"
+          goback={() => navigation.goBack()}
+          Title="Search"
+        />
         <View style={styles.searchbar}>
           <TextInput
             style={styles.searchInput}

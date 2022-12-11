@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {View, Text, Image, ScrollView} from 'react-native';
-
+import AppBarComponent from '../../components/AppBar Component/AppBarComponent';
 import styles from './SavedMovieStyle';
 
 const SavedMovies = () => {
@@ -9,6 +9,10 @@ const SavedMovies = () => {
   return (
     <ScrollView>
       <View style={styles.pageContainer}>
+        <AppBarComponent
+          goback={() => navigation.goBack()}
+          Title="Watch list"
+        />
         {result.length !== 0 ? (
           <View></View>
         ) : (
