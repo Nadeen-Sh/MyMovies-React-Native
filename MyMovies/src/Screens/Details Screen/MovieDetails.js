@@ -4,7 +4,6 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from './MovieDetailsStyle';
 import {Tab, TabView} from '@rneui/themed';
 import movies from '../../Film';
-// import Tabs from '../../components/Tabs Component/TabsComponent';
 
 const MovieDetails = ({route, navigation}) => {
   const {id} = route.params;
@@ -15,7 +14,7 @@ const MovieDetails = ({route, navigation}) => {
         {movies &&
           movies.map(item =>
             item.imdbID === id ? (
-              <View style={{height: 370, padding: 16}}>
+              <View style={{padding: 16}}>
                 <Image
                   source={{uri: item.image !== '' ? item.image : undefined}}
                   style={{
@@ -27,6 +26,15 @@ const MovieDetails = ({route, navigation}) => {
                   source={{uri: item.image !== '' ? item.image : undefined}}
                   style={styles.profile}
                 />
+                <View style={styles.raiting}>
+                  <Icon
+                    type="EvilIcons"
+                    name="star"
+                    color="#FF8700"
+                    size={14}
+                  />
+                  <Text style={{paddingLeft: 3}}>{item.imdbRating}</Text>
+                </View>
 
                 <View style={styles.movieTitleContainer}>
                   <Text style={styles.movieTitle}>{item.Title}</Text>
@@ -63,35 +71,100 @@ const MovieDetails = ({route, navigation}) => {
                     <Text style={styles.iconText}>{item.Runtime}</Text>
                   </View>
                 </View>
+
+                <View
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                  }}>
+                  <View style={{width: 390}}>
+                    <Tab
+                      value={index}
+                      onChange={e => setIndex(e)}
+                      indicatorStyle={{
+                        backgroundColor: 'grey',
+                        height: 3,
+                      }}
+                      variant="default">
+                      <Tab.Item
+                        title="About movie"
+                        titleStyle={{fontSize: 12, color: 'white'}}
+                      />
+                      <Tab.Item
+                        title="Reviews"
+                        titleStyle={{fontSize: 12, color: 'white'}}
+                      />
+                      <Tab.Item
+                        title="Cast"
+                        titleStyle={{fontSize: 12, color: 'white'}}
+                      />
+                    </Tab>
+                  </View>
+                  {index === 0 ? (
+                    <View>
+                      <Text style={[styles.movieDetails, styles.about]}>
+                        {item.Plot}
+                      </Text>
+                    </View>
+                  ) : index === 1 ? (
+                    <View>
+                      {item.Reviews.map(review => {
+                        return (
+                          <View style={styles.ReContainer}>
+                            <View style={styles.rImg}>
+                              <Image
+                                source={review.uri}
+                                style={{
+                                  height: 44,
+                                  width: 44,
+                                }}
+                              />
+                              <Text
+                                style={{
+                                  color: '#0296E5',
+                                  paddingTop: 5,
+                                }}>
+                                {review.rate}
+                              </Text>
+                            </View>
+                            <View
+                              tyle={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'flex-end',
+                              }}>
+                              <Text style={styles.name}>{review.name}</Text>
+                              <Text style={[styles.review]}>
+                                {review.review}
+                              </Text>
+                            </View>
+                          </View>
+                        );
+                      })}
+                    </View>
+                  ) : (
+                    <View style={styles.movieActors}>
+                      {item.Actors.map(actor => {
+                        return (
+                          <View style={styles.actor}>
+                            <Image
+                              source={require('../../assests/actor1.png')}
+                              style={{
+                                height: 100,
+                                width: 100,
+                                borderRadius: 50,
+                              }}
+                            />
+                            <Text>{actor}</Text>
+                          </View>
+                        );
+                      })}
+                    </View>
+                  )}
+                </View>
               </View>
             ) : null,
           )}
-      </View>
-
-      <View style={{display: 'flex', alignItems: 'center'}}>
-        <View style={{width: 330}}>
-          <Tab
-            value={index}
-            onChange={e => setIndex(e)}
-            indicatorStyle={{
-              backgroundColor: 'grey',
-              height: 3,
-            }}
-            variant="default">
-            <Tab.Item
-              title="About"
-              titleStyle={{fontSize: 12, color: 'white'}}
-            />
-            <Tab.Item
-              title="Reviwes"
-              titleStyle={{fontSize: 12, color: 'white'}}
-            />
-            <Tab.Item
-              title="Cast"
-              titleStyle={{fontSize: 12, color: 'white'}}
-            />
-          </Tab>
-        </View>
       </View>
     </ScrollView>
   );

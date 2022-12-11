@@ -5,6 +5,7 @@ import MovieDetails from './Screens/Details Screen/MovieDetails';
 import themeStyle from './theme.style';
 import SearchScreen from './Screens/Search Screen/SearchScreen';
 import SavedMovies from './Screens/SavedMovie Screen/SavedMovie';
+import Start from './Screens/Start';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +21,7 @@ const MainStackNavigator = () => {
       initialRouteName="home">
       <Stack.Screen name="home" component={HomeScreen} />
       <Stack.Screen name="details" component={MovieDetails} />
+      <Stack.Screen name="splash" component={Start} />
     </Stack.Navigator>
   );
 };
