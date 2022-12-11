@@ -1,14 +1,62 @@
 import * as React from 'react';
-import {View, Text, ScrollView, Image} from 'react-native';
+import {View, Text, ScrollView, Image, Button} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from './MovieDetailsStyle';
 import {Tab} from '@rneui/themed';
 import movies from '../../Film';
 import AppBarComponent from '../../components/AppBar Component/AppBarComponent';
+import {openDatabase} from 'react-native-sqlite-storage';
+
+const db = openDatabase({
+  name: 'rn_sqlite',
+});
 
 const MovieDetails = ({route, navigation}) => {
   const {id} = route.params;
+  console.log(id);
   const [index, setIndex] = React.useState(0);
+
+  const saved = async () => {
+    await createTables();
+    await addMovie();
+  };
+
+  const createTables = () => {
+    db.transaction(txn => {
+      txn.executeSql(
+        `CREATE TABLE IF NOT EXISTS movies (id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR(20))`,
+        [],
+        (sqlTxn, res) => {
+          console.log('table created successfully');
+        },
+        error => {
+          console.log('error on creating table ' + error.message);
+        },
+      );
+    });
+  };
+
+  const addMovie = () => {
+    if (!id) {
+      alert('Enter id');
+      return false;
+    }
+
+    db.transaction(txn => {
+      txn.executeSql(
+        `INSERT INTO movies (name) VALUES (?)`,
+        [id],
+        (sqlTxn, res) => {
+          console.log(`${id} id added successfully`);
+          getCategories();
+        },
+        error => {
+          console.log('error on adding id ' + error.message);
+        },
+      );
+    });
+  };
+
   return (
     <ScrollView>
       <View>
@@ -16,6 +64,7 @@ const MovieDetails = ({route, navigation}) => {
           icon="bookmark"
           goback={() => navigation.goBack()}
           Title="Detail"
+          onpress={saved}
         />
         {movies &&
           movies.map(item =>
@@ -41,7 +90,6 @@ const MovieDetails = ({route, navigation}) => {
                   />
                   <Text style={{paddingLeft: 3}}>{item.imdbRating}</Text>
                 </View>
-
                 <View style={styles.movieTitleContainer}>
                   <Text style={styles.movieTitle}>{item.Title}</Text>
                 </View>
