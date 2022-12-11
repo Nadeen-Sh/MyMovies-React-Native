@@ -2,8 +2,9 @@ import * as React from 'react';
 import {View, Text, ScrollView, Image} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from './MovieDetailsStyle';
-import {Tab, TabView} from '@rneui/themed';
+import {Tab} from '@rneui/themed';
 import movies from '../../Film';
+import AppBarComponent from '../../components/AppBar Component/AppBarComponent';
 
 const MovieDetails = ({route, navigation}) => {
   const {id} = route.params;
@@ -11,12 +12,17 @@ const MovieDetails = ({route, navigation}) => {
   return (
     <ScrollView>
       <View>
+        <AppBarComponent
+          icon="bookmark"
+          goback={() => navigation.goBack()}
+          Title="Detail"
+        />
         {movies &&
           movies.map(item =>
             item.imdbID === id ? (
               <View style={{padding: 16}}>
                 <Image
-                  source={{uri: item.image !== '' ? item.image : undefined}}
+                  source={{uri: item.Poster !== '' ? item.Poster : undefined}}
                   style={{
                     height: 210.94,
                     width: 375,
