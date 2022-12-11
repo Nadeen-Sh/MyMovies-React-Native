@@ -3,11 +3,8 @@ export default movies = [
     Title: 'Avatar',
     Year: '2009',
     Rated: 'PG-13',
-    Released: '18 Dec 2009',
-    Runtime: '162 min',
+    Runtime: '1hr 2min',
     Genre: 'Action',
-    Director: 'James Cameron',
-    Writer: 'James Cameron',
     Actors: [
       'Sam Worthington',
       'Zoe Saldana',
@@ -17,23 +14,16 @@ export default movies = [
     Plot: 'A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.',
     Language: 'English, Spanish',
     Country: 'USA, UK',
-    Awards: 'Won 3 Oscars. Another 80 wins & 121 nominations.',
     Poster:
-      'http://ia.media-imdb.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_SX300.jpg',
-    Metascore: '83',
-    imdbRating: '7.9',
-    imdbVotes: '890,617',
-    imdbID: 'tt0499549',
-    Type: 'movie',
-    Response: 'True',
-    image:
       'https://images-na.ssl-images-amazon.com/images/M/MV5BMjEyOTYyMzUxNl5BMl5BanBnXkFtZTcwNTg0MTUzNA@@._V1_SX1500_CR0,0,1500,999_AL_.jpg',
+    imdbRating: '7.9',
+    imdbID: 'tt0499549',
+    image: 'https://m.media-amazon.com/images/I/81SLoj0EmAL._AC_UY218_.jpg',
     Reviews: [
       {
         name: 'Iqbal Shafiq Rozaan',
         uri: require('./assests/person.png'),
         rate: 6.3,
-
         review:
           'From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government., ',
       },
@@ -43,12 +33,8 @@ export default movies = [
     Title: 'I Am Legend',
     Year: '2007',
     Rated: 'PG-13',
-    Released: '14 Dec 2007',
     Runtime: '101 min',
     Genre: 'Drama',
-    Director: 'Francis Lawrence',
-    Writer:
-      'Mark Protosevich (screenplay), Akiva Goldsman (screenplay), Richard Matheson (novel), John William Corrington, Joyce Hooper Corrington',
     Actors: [
       'Will Smith',
       'Alice Braga',
@@ -58,23 +44,16 @@ export default movies = [
     Plot: 'Years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure.',
     Language: 'English',
     Country: 'USA',
-    Awards: '9 wins & 21 nominations.',
     Poster:
-      'http://ia.media-imdb.com/images/M/MV5BMTU4NzMyNDk1OV5BMl5BanBnXkFtZTcwOTEwMzU1MQ@@._V1_SX300.jpg',
-    Metascore: '65',
-    imdbRating: '7.2',
-    imdbVotes: '533,874',
-    imdbID: 'tt0480249',
-    Type: 'movie',
-    Response: 'True',
-    image:
       'https://images-na.ssl-images-amazon.com/images/M/MV5BMTI0NTI4NjE3NV5BMl5BanBnXkFtZTYwMDA0Nzc4._V1_.jpg',
+    imdbRating: '7.2',
+    imdbID: 'tt0480249',
+    image: 'https://m.media-amazon.com/images/I/912trwinakL._AC_UY218_.jpg',
     Reviews: [
       {
         name: 'Iqbal Shafiq Rozaan',
         uri: require('./assests/person.png'),
         rate: 6.3,
-
         review:
           'From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government., ',
       },
@@ -83,28 +62,24 @@ export default movies = [
   {
     Title: '300',
     Year: '2006',
-    Rated: 'R',
+
     Released: '09 Mar 2007',
     Runtime: '117 min',
     Genre: 'Action',
-    Director: 'Zack Snyder',
-    Writer:
-      'Zack Snyder (screenplay), Kurt Johnstad (screenplay), Michael Gordon (screenplay), Frank Miller (graphic novel), Lynn Varley (graphic novel)',
     Actors: ['Gerard Butler', 'Lena Headey', ' Dominic West', ' David Wenham'],
     Plot: 'King Leonidas of Sparta and a force of 300 men fight the Persians at Thermopylae in 480 B.C.',
     Language: 'English',
     Country: 'USA',
     Awards: '16 wins & 42 nominations.',
     Poster:
-      'http://ia.media-imdb.com/images/M/MV5BMjAzNTkzNjcxNl5BMl5BanBnXkFtZTYwNDA4NjE3._V1_SX300.jpg',
+      'https://images-na.ssl-images-amazon.com/images/M/MV5BMTMwNTg5MzMwMV5BMl5BanBnXkFtZTcwMzA2NTIyMw@@._V1_SX1777_CR0,0,1777,937_AL_.jpg',
     Metascore: '52',
     imdbRating: '7.7',
     imdbVotes: '611,046',
     imdbID: 'tt0416449',
     Type: 'movie',
     Response: 'True',
-    image:
-      'https://images-na.ssl-images-amazon.com/images/M/MV5BMTMwNTg5MzMwMV5BMl5BanBnXkFtZTcwMzA2NTIyMw@@._V1_SX1777_CR0,0,1777,937_AL_.jpg',
+    image: 'https://m.media-amazon.com/images/I/91FiGVoRbAL._AC_UY218_.jpg',
     Reviews: [
       {
         name: 'Iqbal Shafiq Rozaan',
@@ -117,34 +92,30 @@ export default movies = [
     ],
   },
   {
-    Title: 'The Avengers',
-    Year: '2012',
-    Rated: 'PG-13',
-    Released: '04 May 2012',
-    Runtime: '143 min',
+    Title: 'Spider-Man',
+    Year: '2019',
+
+    Runtime: '2hr 34min',
     Genre: 'Action',
-    Director: 'Joss Whedon',
-    Writer: 'Joss Whedon (screenplay), Zak Penn (story), Joss Whedon (story)',
     Actors: [
-      'Robert Downey Jr.',
-      'Chris Evans',
-      ' Mark Ruffalo',
-      'Chris Hemsworth',
+      'Marisa Tomei',
+      'Zendaya',
+      'Jacob Batalon',
+      ' J.B. Smoove',
+      'Martin Starr',
     ],
-    Plot: "Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity.",
+    Plot: "Following the events of Avengers: Endgame, Peter Parker (Tom Holland) returns in Spider-Man: Far From Home. Our friendly neighborhood Super Hero decides to join his best friends Ned, MJ, and the rest of the gang on a European vacation. However, Peter's plan to leave super heroics behind for a few weeks is quickly scrapped when he begrudgingly agrees to help Nick Fury (Samuel L. Jackson) uncove.",
     Language: 'English, Russian',
     Country: 'USA',
-    Awards: 'Nominated for 1 Oscar. Another 34 wins & 75 nominations.',
+
     Poster:
-      'http://ia.media-imdb.com/images/M/MV5BMTk2NTI1MTU4N15BMl5BanBnXkFtZTcwODg0OTY0Nw@@._V1_SX300.jpg',
-    Metascore: '69',
-    imdbRating: '8.1',
-    imdbVotes: '1,003,301',
+      'https://images-na.ssl-images-amazon.com/images/S/pv-target-images/3a86ddbe4b7a482f71506084a1292059858c338fa3c5984eb162efd4fc92df84._UY500_UX667_RI_V_TTW_SX329_.jpg',
+
+    imdbRating: '9.1',
+
     imdbID: 'tt0848228',
-    Type: 'movie',
-    Response: 'True',
-    image:
-      'https://images-na.ssl-images-amazon.com/images/M/MV5BMTA0NjY0NzE4OTReQTJeQWpwZ15BbWU3MDczODg2Nzc@._V1_SX1777_CR0,0,1777,999_AL_.jpg',
+
+    image: 'https://m.media-amazon.com/images/I/910VWveNooL._AC_UY218_.jpg',
     Reviews: [
       {
         name: 'Iqbal Shafiq Rozaan',
@@ -159,12 +130,8 @@ export default movies = [
   {
     Title: 'The Wolf of Wall Street',
     Year: '2013',
-    Rated: 'R',
-    Released: '25 Dec 2013',
     Runtime: '180 min',
     Genre: 'Comedy',
-    Director: 'Martin Scorsese',
-    Writer: 'Terence Winter (screenplay), Jordan Belfort (book)',
     Actors: [
       'Leonardo DiCaprio',
       'Jonah Hill',
@@ -174,17 +141,15 @@ export default movies = [
     Plot: 'Based on the true story of Jordan Belfort, from his rise to a wealthy stock-broker living the high life to his fall involving crime, corruption and the federal government.',
     Language: 'English, French',
     Country: 'USA',
-    Awards: 'Nominated for 5 Oscars. Another 35 wins & 154 nominations.',
+
     Poster:
-      'http://ia.media-imdb.com/images/M/MV5BMjIxMjgxNTk0MF5BMl5BanBnXkFtZTgwNjIyOTg2MDE@._V1_SX300.jpg',
-    Metascore: '75',
-    imdbRating: '8.2',
-    imdbVotes: '786,985',
-    imdbID: 'tt0993846',
-    Type: 'movie',
-    Response: 'True',
-    image:
       'https://images-na.ssl-images-amazon.com/images/M/MV5BNDIwMDIxNzk3Ml5BMl5BanBnXkFtZTgwMTg0MzQ4MDE@._V1_SX1500_CR0,0,1500,999_AL_.jpg',
+
+    imdbRating: '8.2',
+
+    imdbID: 'tt0993846',
+
+    image: 'https://m.media-amazon.com/images/I/71hqu2aZvgL._AC_UY218_.jpg',
     Reviews: [
       {
         name: 'Iqbal Shafiq Rozaan',
@@ -199,12 +164,9 @@ export default movies = [
   {
     Title: 'Interstellar',
     Year: '2014',
-    Rated: 'PG-13',
-    Released: '07 Nov 2014',
+
     Runtime: '169 min',
     Genre: 'Drama',
-    Director: 'Christopher Nolan',
-    Writer: 'Jonathan Nolan, Christopher Nolan',
     Actors: [
       'Ellen Burstyn',
       'Matthew McConaughey',
@@ -214,17 +176,15 @@ export default movies = [
     Plot: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
     Language: 'English',
     Country: 'USA, UK',
-    Awards: 'Won 1 Oscar. Another 39 wins & 134 nominations.',
+
     Poster:
-      'http://ia.media-imdb.com/images/M/MV5BMjIxNTU4MzY4MF5BMl5BanBnXkFtZTgwMzM4ODI3MjE@._V1_SX300.jpg',
-    Metascore: '74',
-    imdbRating: '8.6',
-    imdbVotes: '937,412',
-    imdbID: 'tt0816692',
-    Type: 'movie',
-    Response: 'True',
-    image:
       'https://images-na.ssl-images-amazon.com/images/M/MV5BMjA3NTEwOTMxMV5BMl5BanBnXkFtZTgwMjMyODgxMzE@._V1_SX1500_CR0,0,1500,999_AL_.jpg',
+
+    imdbRating: '8.6',
+
+    imdbID: 'tt0816692',
+
+    image: 'https://m.media-amazon.com/images/I/71NbodPKj0L._AC_UY218_.jpg',
     Reviews: [
       {
         name: 'Iqbal Shafiq Rozaan',
@@ -237,221 +197,24 @@ export default movies = [
     ],
   },
   {
-    Title: 'Game of Thrones',
-    Year: '2011–',
-    Rated: 'TV-MA',
-    Released: '17 Apr 2011',
-    Runtime: '56 min',
+    Title: 'The Shawshank',
+    Year: '1994',
+
+    Runtime: '2hr 22min',
     Genre: 'Drama',
-    Director: 'N/A',
-    Writer: 'David Benioff, D.B. Weiss',
-    Actors: ['Peter Dinklage', 'Lena Headey', 'Emilia Clarke', 'Kit Harington'],
-    Plot: 'While a civil war brews between several noble families in Westeros, the children of the former rulers of the land attempt to rise up to power. Meanwhile a forgotten race, bent on destruction, plans to return after thousands of years in the North.',
+    Actors: ['Tim Robbins', 'Morgan Freeman', 'Bob Gunton'],
+    Plot: 'Chronicles the experiences of a formerly successful banker as a prisoner in the gloomy jailhouse of Shawshank after being found guilty of a crime he did not commit. The film portrays the mans unique way of dealing with his new, torturous life; along the way he befriends a number of fellow prisoners, most notably a wise long-term inmate named Red.',
     Language: 'English',
     Country: 'USA, UK',
-    Awards: 'Won 1 Golden Globe. Another 185 wins & 334 nominations.',
+
     Poster:
-      'http://ia.media-imdb.com/images/M/MV5BMjM5OTQ1MTY5Nl5BMl5BanBnXkFtZTgwMjM3NzMxODE@._V1_SX300.jpg',
-    Metascore: 'N/A',
+      'https://c4.wallpaperflare.com/wallpaper/359/746/387/the-shawshank-redemption-movies-wallpaper-preview.jpg',
+
     imdbRating: '9.5',
-    imdbVotes: '1,046,830',
+
     imdbID: 'tt0944947',
-    Type: 'series',
-    totalSeasons: '7',
-    Response: 'True',
-    image:
-      'https://images-na.ssl-images-amazon.com/images/M/MV5BNDc1MGUyNzItNWRkOC00MjM1LWJjNjMtZTZlYWIxMGRmYzVlXkEyXkFqcGdeQXVyMzU3MDEyNjk@._V1_SX1777_CR0,0,1777,999_AL_.jpg',
-    Reviews: [
-      {
-        name: 'Iqbal Shafiq Rozaan',
-        uri: require('./assests/person.png'),
-        rate: 6.3,
 
-        review:
-          'From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government., ',
-      },
-    ],
-  },
-  {
-    Title: 'Vikings',
-    Year: '2013–',
-    Rated: 'TV-14',
-    Released: '03 Mar 2013',
-    Runtime: '44 min',
-    Genre: 'History',
-    Director: 'N/A',
-    Writer: 'Michael Hirst',
-    Actors: [
-      'Travis Fimmel',
-      'Clive Standen',
-      'Gustaf Skarsgård',
-      'Katheryn Winnick',
-    ],
-    Plot: 'The world of the Vikings is brought to life through the journey of Ragnar Lothbrok, the first Viking to emerge from Norse legend and onto the pages of history - a man on the edge of myth.',
-    Language: 'English, Old English, Norse, Old, Latin',
-    Country: 'Ireland, Canada',
-    Awards:
-      'Nominated for 7 Primetime Emmys. Another 17 wins & 49 nominations.',
-    Poster:
-      'http://ia.media-imdb.com/images/M/MV5BOTEzNzI3MDc0N15BMl5BanBnXkFtZTgwMzk1MzA5NzE@._V1_SX300.jpg',
-    Metascore: 'N/A',
-    imdbRating: '8.6',
-    imdbVotes: '198,041',
-    imdbID: 'tt2306299',
-    Type: 'series',
-    totalSeasons: '5',
-    Response: 'True',
-    image:
-      'https://images-na.ssl-images-amazon.com/images/M/MV5BMjM5MTM1ODUxNV5BMl5BanBnXkFtZTgwNTAzOTI2ODE@._V1_.jpg',
-    Reviews: [
-      {
-        name: 'Iqbal Shafiq Rozaan',
-        uri: require('./assests/person.png'),
-        rate: 6.3,
-
-        review:
-          'From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government., ',
-      },
-    ],
-  },
-  {
-    Title: 'Gotham',
-    Year: '2014–',
-    Rated: 'TV-14',
-    Released: '01 Aug 2014',
-    Runtime: '42 min',
-    Genre: 'Crime',
-    Director: 'N/A',
-    Writer: 'Bruno Heller',
-    Actors: ['Ben McKenzie', 'Donal Logue', 'David Mazouz', 'Sean Pertwee'],
-    Plot: "The story behind Detective James Gordon's rise to prominence in Gotham City in the years before Batman's arrival.",
-    Language: 'English',
-    Country: 'USA',
-    Awards: 'Nominated for 4 Primetime Emmys. Another 3 wins & 22 nominations.',
-    Poster:
-      'http://ia.media-imdb.com/images/M/MV5BMTY2MjMwNDE4OV5BMl5BanBnXkFtZTgwNjI1NjU0OTE@._V1_SX300.jpg',
-    Metascore: 'N/A',
-    imdbRating: '8.0',
-    imdbVotes: '133,375',
-    imdbID: 'tt3749900',
-    Type: 'series',
-    totalSeasons: '3',
-    Response: 'True',
-    image:
-      'https://images-na.ssl-images-amazon.com/images/M/MV5BNDI3ODYyODY4OV5BMl5BanBnXkFtZTgwNjE5NDMwMDI@._V1_SY1000_SX1500_AL_.jpg',
-    Reviews: [
-      {
-        name: 'Iqbal Shafiq Rozaan',
-        uri: require('./assests/person.png'),
-        rate: 6.3,
-
-        review:
-          'From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government., ',
-      },
-    ],
-  },
-  {
-    Title: 'Power',
-    Year: '2014–',
-    Rated: 'TV-MA',
-    Released: 'N/A',
-    Runtime: '50 min',
-    Genre: 'Crime',
-    Director: 'N/A',
-    Writer: 'Courtney Kemp Agboh',
-    Actors: ['Omari Hardwick', 'Joseph Sikora', 'Andy Bean', 'Lela Loren'],
-    Plot: 'James "Ghost" St. Patrick, a wealthy New York night club owner who has it all, catering for the city\'s elite and dreaming big, lives a double life as a drug kingpin.',
-    Language: 'English',
-    Country: 'USA',
-    Awards: '1 win & 6 nominations.',
-    Poster:
-      'http://ia.media-imdb.com/images/M/MV5BOTA4NTkzMjUzOF5BMl5BanBnXkFtZTgwNzg5ODkxOTE@._V1_SX300.jpg',
-    Metascore: 'N/A',
-    imdbRating: '8.0',
-    imdbVotes: '14,770',
-    imdbID: 'tt3281796',
-    Type: 'series',
-    totalSeasons: '3',
-    Response: 'True',
-    image:
-      'https://images-na.ssl-images-amazon.com/images/M/MV5BMTc2ODg0MzMzM15BMl5BanBnXkFtZTgwODYxODA5NTE@._V1_SY1000_SX1500_AL_.jpg',
-    Reviews: [
-      {
-        name: 'Iqbal Shafiq Rozaan',
-        uri: require('./assests/person.png'),
-        rate: 6.3,
-
-        review:
-          'From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government., ',
-      },
-    ],
-  },
-  {
-    Title: 'Narcos',
-    Year: '2015–',
-    Rated: 'TV-MA',
-    Released: '28 Aug 2015',
-    Runtime: '49 min',
-    Genre: 'Drama',
-    Director: 'N/A',
-    Writer: 'Carlo Bernard, Chris Brancato, Doug Miro, Paul Eckstein',
-    Actors: [
-      'Wagner Moura',
-      'Boyd Holbrook',
-      'Pedro Pascal',
-      'Joanna Christie',
-    ],
-    Plot: 'A chronicled look at the criminal exploits of Colombian drug lord Pablo Escobar.',
-    Language: 'English, Spanish',
-    Country: 'USA',
-    Awards: 'Nominated for 2 Golden Globes. Another 4 nominations.',
-    Poster:
-      'http://ia.media-imdb.com/images/M/MV5BMTU0ODQ4NDg2OF5BMl5BanBnXkFtZTgwNzczNTE4OTE@._V1_SX300.jpg',
-    Metascore: 'N/A',
-    imdbRating: '8.9',
-    imdbVotes: '118,680',
-    imdbID: 'tt2707408',
-    Type: 'series',
-    totalSeasons: '2',
-    Response: 'True',
-    image:
-      'https://images-na.ssl-images-amazon.com/images/M/MV5BMTk2MDMzMTc0MF5BMl5BanBnXkFtZTgwMTAyMzA1OTE@._V1_SX1500_CR0,0,1500,999_AL_.jpg',
-    Reviews: [
-      {
-        name: 'Iqbal Shafiq Rozaan',
-        uri: require('./assests/person.png'),
-        rate: 6.3,
-
-        review:
-          'From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government., ',
-      },
-    ],
-  },
-  {
-    Title: 'Breaking Bad',
-    Year: '2008–2013',
-    Rated: 'TV-14',
-    Released: '20 Jan 2008',
-    Runtime: '49 min',
-    Genre: 'Thriller',
-    Director: 'N/A',
-    Writer: 'Vince Gilligan',
-    Actors: ['Bryan Cranston', ' Anna Gunn', 'Aaron Paul', 'Dean Norris'],
-    Plot: "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's financial future.",
-    Language: 'English, Spanish',
-    Country: 'USA',
-    Awards: 'Won 2 Golden Globes. Another 132 wins & 218 nominations.',
-    Poster:
-      'http://ia.media-imdb.com/images/M/MV5BMTQ0ODYzODc0OV5BMl5BanBnXkFtZTgwMDk3OTcyMDE@._V1_SX300.jpg',
-    Metascore: 'N/A',
-    imdbRating: '9.5',
-    imdbVotes: '889,883',
-    imdbID: 'tt0903747',
-    Type: 'series',
-    totalSeasons: '5',
-    Response: 'True',
-    image:
-      'https://images-na.ssl-images-amazon.com/images/M/MV5BMjA5MTE3MTgwMF5BMl5BanBnXkFtZTgwOTQxMjUzMDE@._V1_SX1500_CR0,0,1500,999_AL_.jpg',
+    image: 'https://m.media-amazon.com/images/I/51ra7ONHmRL._SX342_.jpg',
     Reviews: [
       {
         name: 'Iqbal Shafiq Rozaan',
@@ -465,15 +228,161 @@ export default movies = [
   },
   {
     ComingSoon: true,
+    Title: 'Enola Holmes 2',
+    Year: '2022',
+
+    Runtime: '60 min',
+    Genre: 'Comedy',
+    Actors: ['Millie Bobby', 'Henry Cavill', 'David Thewlis'],
+    Plot: 'Now a detective-for-hire, Enola Holmes takes on her first official case to find a missing girl as the sparks of a dangerous conspiracy ignite a mystery that requires the help of friends - and Sherlock himself - to unravel',
+    Language: 'English, Old English, Norse, Old, Latin',
+    Country: 'Ireland, Canada',
+
+    Poster:
+      'https://w0.peakpx.com/wallpaper/699/119/HD-wallpaper-henry-cavill-millie-bobby-brown-enola-holmes-8k.jpg',
+
+    imdbRating: '8.6',
+
+    imdbID: 'tt2306299',
+
+    image:
+      'https://m.media-amazon.com/images/M/MV5BMDI1NWM1ZDItNDFhMi00YWRhLTg1YzItNTNhY2M2N2QzY2FkXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UY209_CR0,0,140,209_AL_.jpg',
+    Reviews: [
+      {
+        name: 'Iqbal Shafiq Rozaan',
+        uri: require('./assests/person.png'),
+        rate: 6.3,
+
+        review:
+          'From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government., ',
+      },
+    ],
+  },
+  {
+    Title: 'The Godfather',
+    Year: '1972',
+
+    Runtime: '2hr 55min',
+    Genre: 'Drama',
+    Actors: ['Marlon Brando', ' Al Pacino', 'James Caan', 'Richard Castellano'],
+    Plot: 'The son of the patriarch of the most powerful Mafia clan in New York returns home from war determined to live his own life - but is forced to take up arms in a clash between his father’s traditional ways and the newcomers who threaten the family business.',
+    Language: 'English',
+    Country: 'USA',
+
+    Poster:
+      'https://m.media-amazon.com/images/S/pv-target-images/2381b6fd146e8ea7523bd11476e79503f2c8347230b9cdd54876c50787d54324._UR1920,1080_SX329_.jpg',
+
+    imdbRating: '8.0',
+
+    imdbID: 'tt3749900',
+    popular: 'True',
+    image: 'https://m.media-amazon.com/images/I/714ZOEiVNtL._AC_UY218_.jpg',
+    Reviews: [
+      {
+        name: 'Iqbal Shafiq Rozaan',
+        uri: require('./assests/person.png'),
+        rate: 6.3,
+
+        review:
+          'From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government., ',
+      },
+    ],
+  },
+  {
+    Title: 'Tarazan',
+    Year: '1999',
+
+    Runtime: '60 min',
+    Genre: 'Animation',
+    Actors: [
+      'Alex D. Linz',
+      ' Rosie O Donnell',
+      'Brian Blessed',
+      'Nigel Hawthorne',
+    ],
+    Plot: 'A boy is adopted by apes and eventually becomes Lord of the Jungle.',
+    Language: 'English',
+    Country: 'USA',
+
+    Poster:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8YZheEV8dQvM7tUrQvwxdELaEcZbqFdHU_g&usqp=CAU',
+
+    imdbRating: '7.8',
+
+    imdbID: 'tt3281796',
+    popular: 'True',
+    image: 'https://m.media-amazon.com/images/I/A1yfvdB0DnL._AC_UY218_.jpg',
+    Reviews: [
+      {
+        name: 'Iqbal Shafiq Rozaan',
+        uri: require('./assests/person.png'),
+        rate: 6.3,
+
+        review:
+          'From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government., ',
+      },
+    ],
+  },
+  {
+    Title: 'Child Play',
+    Year: '1988',
+
+    Runtime: '60 min',
+    Genre: 'Horror',
+    Actors: ['Catherine Hicks', 'Chris Sarandon', 'Alex Vincent'],
+    Plot: 'A single mother gives her son a much sought-after doll for his birthday, only to discover that it is possessed by the soul of a serial killer.',
+    Language: 'English, Spanish',
+    Country: 'USA',
+
+    Poster:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj3WpDfSYSfESOyMQIThwsSh5YXBhI7-f5hQ&usqp=CAU',
+
+    imdbRating: '8.9',
+    imdbVotes: '118,680',
+
+    popular: 'True',
+    image: 'https://m.media-amazon.com/images/I/81AHTLxNdFL._AC_UY218_.jpg',
+    Reviews: [
+      {
+        name: 'Iqbal Shafiq Rozaan',
+        uri: require('./assests/person.png'),
+        rate: 6.3,
+        review:
+          'From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government., ',
+      },
+    ],
+  },
+  {
+    ComingSoon: true,
+    Title: 'Little Nicholas',
+    Year: '2022',
+    Runtime: '1hr 22min',
+    Genre: 'Animation',
+    Actors: ['Alain Chabat', ' Laurent Lafitte'],
+    Plot: 'It follows the adventures of a mischievous boy and his schoolmates, teacher and parents in Paris in the 1960s.',
+    Language: 'English, Spanish',
+    Country: 'USA',
+    Poster:
+      'https://alliancefrancaise.org.sg/web/image/466777/nicolas.jpg?access_token=cd1a31ac-c864-4cc7-935c-584a51e785d5',
+    imdbRating: '7.3',
+    imdbID: 'tt0903747',
+    image:
+      'https://m.media-amazon.com/images/M/MV5BM2Q3Mjc1YzAtNjYwYy00M2I1LWE0Y2EtMjA2MTJlZDRkMjgxXkEyXkFqcGdeQXVyODIyOTEyMzY@._V1_QL75_UY148_CR5,0,100,148_.jpg',
+    Reviews: [
+      {
+        name: 'Iqbal Shafiq Rozaan',
+        uri: require('./assests/person.png'),
+        rate: 6.3,
+        review:
+          'From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government., ',
+      },
+    ],
+  },
+  {
     Title: 'Doctor Strange',
     Year: '2016',
     Rated: 'N/A',
-    Released: '04 Nov 2016',
-    Runtime: 'N/A',
     Genre: 'Fantasy',
-    Director: 'Scott Derrickson',
-    Writer:
-      'Scott Derrickson (screenplay), C. Robert Cargill (screenplay), Jon Spaihts (story by), Scott Derrickson (story by), C. Robert Cargill (story by), Steve Ditko (comic book)',
     Actors: [
       'Rachel McAdams',
       'Benedict Cumberbatch',
@@ -483,15 +392,12 @@ export default movies = [
     Plot: 'After his career is destroyed, a brilliant but arrogant and conceited surgeon gets a new lease on life when a sorcerer takes him under her wing and trains him to defend the world against evil.',
     Language: 'English',
     Country: 'USA',
-    Awards: 'N/A',
     Poster:
-      'http://ia.media-imdb.com/images/M/MV5BNjgwNzAzNjk1Nl5BMl5BanBnXkFtZTgwMzQ2NjI1OTE@._V1_SX300.jpg',
+      'https://c4.wallpaperflare.com/wallpaper/441/161/104/the-avengers-avengers-endgame-ant-man-avengers-endgame-black-panther-marvel-comics-hd-wallpaper-preview.jpg',
     Metascore: 'N/A',
-    imdbRating: '9',
-    imdbVotes: 'N/A',
+    imdbRating: '5.4',
+
     imdbID: 'tt1211837',
-    Type: 'movie',
-    Response: 'True',
     image:
       'https://images-na.ssl-images-amazon.com/images/M/MV5BMjM3ODc1ODI5Ml5BMl5BanBnXkFtZTgwODMzMDY3OTE@._V1_.jpg',
     Reviews: [
@@ -499,23 +405,16 @@ export default movies = [
         name: 'Iqbal Shafiq Rozaan',
         uri: require('./assests/person.png'),
         rate: 6.3,
-
         review:
           'From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government., ',
       },
     ],
   },
   {
-    ComingSoon: true,
-    Title: 'Rogue One: A Star Wars Story',
+    Title: 'A Star Wars Story',
     Year: '2016',
-    Rated: 'N/A',
-    Released: '16 Dec 2016',
-    Runtime: 'N/A',
+    Runtime: '60 min',
     Genre: 'Action',
-    Director: 'Gareth Edwards',
-    Writer:
-      'Chris Weitz (screenplay), Tony Gilroy (screenplay), John Knoll (story), Gary Whitta (story), George Lucas (characters)',
     Actors: [
       'Felicity Jones',
       'Riz Ahmed',
@@ -525,15 +424,10 @@ export default movies = [
     Plot: 'The Rebellion makes a risky move to steal the plans to the Death Star, setting up the epic saga to follow.',
     Language: 'English',
     Country: 'USA',
-    Awards: '1 nomination.',
     Poster:
       'https://images-na.ssl-images-amazon.com/images/M/MV5BMjQyMzI2OTA3OF5BMl5BanBnXkFtZTgwNDg5NjQ0OTE@._V1_SY1000_CR0,0,674,1000_AL_.jpg',
-    Metascore: 'N/A',
     imdbRating: '7',
-    imdbVotes: 'N/A',
     imdbID: 'tt3748528',
-    Type: 'movie',
-    Response: 'True',
     image:
       'https://images-na.ssl-images-amazon.com/images/M/MV5BMjE3MzA4Nzk3NV5BMl5BanBnXkFtZTgwNjAxMTc1ODE@._V1_SX1777_CR0,0,1777,744_AL_.jpg',
     Reviews: [
@@ -541,7 +435,6 @@ export default movies = [
         name: 'Iqbal Shafiq Rozaan',
         uri: require('./assests/person.png'),
         rate: 6.3,
-
         review:
           'From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government., ',
       },
@@ -551,13 +444,8 @@ export default movies = [
     ComingSoon: true,
     Title: "Assassin's Creed",
     Year: '2016',
-    Rated: 'N/A',
-    Released: '21 Dec 2016',
-    Runtime: 'N/A',
+    Runtime: '1hr 30min',
     Genre: 'Fantasy',
-    Director: 'Justin Kurzel',
-    Writer:
-      'Bill Collage (screenplay), Adam Cooper (screenplay), Michael Lesslie (screenplay)',
     Actors: [
       'Michael Fassbender',
       ' Michael Kenneth Williams',
@@ -569,13 +457,9 @@ export default movies = [
     Country: 'UK, France, USA, Hong Kong',
     Awards: 'N/A',
     Poster:
-      'http://ia.media-imdb.com/images/M/MV5BMTU2MTQwMjU1OF5BMl5BanBnXkFtZTgwMDA5NjU5ODE@._V1_SX300.jpg',
-    Metascore: 'N/A',
-    imdbRating: '6',
-    imdbVotes: 'N/A',
+      'https://c4.wallpaperflare.com/wallpaper/257/734/411/assassin-039-s-castle-creed-fantasy-wallpaper-preview.jpg',
+    imdbRating: '6.4',
     imdbID: 'tt2094766',
-    Type: 'movie',
-    Response: 'True',
     image:
       'https://images-na.ssl-images-amazon.com/images/M/MV5BN2EyYzgyOWEtNTY2NS00NjRjLWJiNDYtMWViMjg5MWZjYjgzXkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_.jpg',
     Reviews: [
@@ -583,50 +467,6 @@ export default movies = [
         name: 'Iqbal Shafiq Rozaan',
         uri: require('./assests/person.png'),
         rate: 6.3,
-
-        review:
-          'From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government., ',
-      },
-    ],
-  },
-  {
-    ComingSoon: true,
-    Title: 'Luke Cage',
-    Year: '2016–',
-    Rated: 'TV-MA',
-    Released: '30 Sep 2016',
-    Runtime: '55 min',
-    Genre: 'Drama',
-    Director: 'N/A',
-    Writer: 'Cheo Hodari Coker',
-    Actors: [
-      'Mahershala Ali',
-      ' Mike Colter',
-      ' Frankie Faison',
-      'Erik LaRay Harvey',
-    ],
-    Plot: 'Given superstrength and durability by a sabotaged experiment, a wrongly accused man escapes prison to become a superhero for hire.',
-    Language: 'English',
-    Country: 'USA',
-    Awards: 'N/A',
-    Poster:
-      'http://ia.media-imdb.com/images/M/MV5BMTcyMzc1MjI5MF5BMl5BanBnXkFtZTgwMzE4ODY2OTE@._V1_SX300.jpg',
-    Metascore: 'N/A',
-    imdbRating: '4',
-    imdbVotes: 'N/A',
-    imdbID: 'tt3322314',
-    Type: 'series',
-    totalSeasons: '1',
-    Response: 'True',
-    image:
-      'https://images-na.ssl-images-amazon.com/images/M/MV5BMjMxNjc1NjI0NV5BMl5BanBnXkFtZTgwNzA0NzY0ODE@._V1_SY1000_CR0,0,1497,1000_AL_.jpg',
-
-    Reviews: [
-      {
-        name: 'Iqbal Shafiq Rozaan',
-        uri: require('./assests/person.png'),
-        rate: 6.3,
-
         review:
           'From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government., ',
       },
