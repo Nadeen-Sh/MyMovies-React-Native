@@ -40,7 +40,13 @@ const BottomTabNavigator = () => {
           paddingBottom: 3,
         },
       }}>
-      <Tab.Screen name="home" component={MainStackNavigator} />
+      <Tab.Screen
+        name="home"
+        component={MainStackNavigator}
+        options={{
+          unmountOnBlur: true,
+        }}
+      />
       <Tab.Screen
         name="watch list"
         component={SevedStackNavigator}
@@ -48,7 +54,13 @@ const BottomTabNavigator = () => {
           unmountOnBlur: true,
         }}
       />
-      <Tab.Screen name="search" component={SearchStackNavigator} />
+      <Tab.Screen
+        name="search"
+        component={SearchStackNavigator}
+        options={{
+          unmountOnBlur: true,
+        }}
+      />
     </Tab.Navigator>
   );
 };
