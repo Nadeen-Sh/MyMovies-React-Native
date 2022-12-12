@@ -16,10 +16,10 @@ const SavedMovies = ({navigation}) => {
   const getMovies = () => {
     db.transaction(txn => {
       txn.executeSql(
-        `SELECT * FROM watchList ORDER BY id DESC`,
+        `SELECT * FROM WchList ORDER BY id DESC`,
         [],
         (sqlTxn, res) => {
-          console.log('watchList retrieved successfully');
+          console.log('WatchList retrieved successfully');
           let len = res.rows.length;
 
           if (len > 0) {
@@ -73,24 +73,19 @@ const SavedMovies = ({navigation}) => {
                       height={145.92}
                       width={100}
                       raduis={16}
-                      onClick={() =>
-                        navigation.navigate('home', {
-                          screen: 'details',
-                          params: {id: item.imdbID},
-                        })
+                      onClick={
+                        () => {}
+                        // navigation.navigate('home', {
+                        //   screen: 'details',
+                        //   params: {id: item.imdbID},
+                        // }
+                        // )
                       }
                     />
                   </View>
                   <View style={styles.details}>
                     <Text style={styles.title}>{item.title}</Text>
-                    <Text
-                      style={{
-                        borderColor: 'red',
-                        borderWidth: 3,
-                        color: 'white',
-                      }}>
-                      {item.imdbID}
-                    </Text>
+
                     <View style={styles.movieResult}>
                       <Icon
                         type="EvilIcons"

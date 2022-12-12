@@ -380,6 +380,7 @@ export default movies = [
   {
     Title: 'Doctor Strange',
     Year: '2016',
+    Runtime: '50 min',
     Rated: 'N/A',
     Genre: 'Fantasy',
     Actors: [

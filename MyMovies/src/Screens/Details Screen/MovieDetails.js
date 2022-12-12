@@ -13,21 +13,39 @@ const db = openDatabase({
 
 const MovieDetails = ({route, navigation}) => {
   const {id} = route.params;
-
   const [index, setIndex] = React.useState(0);
+  const [imdbId, setImdbId] = React.useState('');
+  const [title, setTitle] = React.useState('');
+  const [img, setImg] = React.useState('');
+  const [poster, setPoster] = React.useState('');
+  const [rate, setRate] = React.useState('');
+  const [year, setYear] = React.useState('');
+  const [genre, setGenre] = React.useState('');
+  const [time, setTime] = React.useState('');
 
-  const saved = async () => {
-    await createTables();
-    await addMovie();
-  };
+  React.useEffect(() => {
+    createTables();
+  }, []);
 
   const createTables = () => {
     db.transaction(txn => {
       txn.executeSql(
-        `CREATE TABLE IF NOT EXISTS watchList (id INTEGER PRIMARY KEY AUTOINCREMENT, imdbId VARCHAR(20), title VARCHAR(20), img TEXT, poster TEXT, rate VARCHAR(20),year VARCHAR(20),genre VARCHAR(20), time VARCHAR(20))`,
+        `CREATE TABLE IF NOT EXISTS WchList (id INTEGER PRIMARY KEY AUTOINCREMENT, imdbId VARCHAR(20), title VARCHAR(20), img TEXT, poster TEXT, rate VARCHAR(20),year VARCHAR(20),genre VARCHAR(20), time VARCHAR(20))`,
         [],
         (sqlTxn, res) => {
           console.log('table created successfully');
+          movies.map(item => {
+            if (item.imdbID === id) {
+              setTitle(item.Title);
+              setImdbId(item.imdbID);
+              setImg(item.image);
+              setPoster(item.Poster);
+              setRate(item.imdbRating);
+              setTime(item.Runtime);
+              setGenre(item.Genre);
+              setYear(item.Year);
+            }
+          });
         },
         error => {
           console.log('error on creating table ' + error.message);
@@ -36,15 +54,15 @@ const MovieDetails = ({route, navigation}) => {
     });
   };
 
-  const addMovie = (e, imdbId, title, img, poster, rate, year, genre, time) => {
-    if (!imdbId) {
+  const addMovie = () => {
+    if (!title) {
       alert('Error saving');
       return false;
     }
 
     db.transaction(txn => {
       txn.executeSql(
-        `INSERT INTO watchList (imdbId,title,img,poster,rate,year,genre,time) VALUES (?,?,?,?,?,?,?,?)`,
+        `INSERT INTO WchList (imdbId,title,img,poster,rate,year,genre,time) VALUES (?,?,?,?,?,?,?,?)`,
         [imdbId, title, img, poster, rate, year, genre, time],
         (sqlTxn, res) => {
           console.log(`${title} added successfully `);
@@ -63,7 +81,7 @@ const MovieDetails = ({route, navigation}) => {
           icon="bookmark"
           goback={() => navigation.goBack()}
           Title="Detail"
-          onpress={createTables}
+          onpress={addMovie}
         />
         {movies &&
           movies.map((item, index) =>
@@ -89,23 +107,7 @@ const MovieDetails = ({route, navigation}) => {
                   />
                   <Text style={{paddingLeft: 3}}>{item.imdbRating}</Text>
                 </View>
-                <Button
-                  title="saved"
-                  onPress={e =>
-                    addMovie(
-                      e,
-                      item.imdbID,
-                      item.Title,
-                      item.image,
-                      item.Poster,
-                      item.imdbRating,
-                      item.Year,
-                      item.Genre,
-                      item.Runtime,
-                    )
-                  }
-                  color="red"
-                />
+
                 <View style={styles.movieTitleContainer}>
                   <Text style={styles.movieTitle}>{item.Title}</Text>
                 </View>
