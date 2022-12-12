@@ -16,7 +16,7 @@ const SavedMovies = ({navigation}) => {
   const getMovies = () => {
     db.transaction(txn => {
       txn.executeSql(
-        `SELECT * FROM WchList ORDER BY id DESC`,
+        `SELECT * FROM WtchList ORDER BY id DESC`,
         [],
         (sqlTxn, res) => {
           console.log('WatchList retrieved successfully');
