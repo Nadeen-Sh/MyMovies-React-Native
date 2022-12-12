@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {View, Text, ScrollView, Image, Button} from 'react-native';
+import {View, Text, ScrollView, Image} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from './MovieDetailsStyle';
 import {Tab} from '@rneui/themed';
@@ -84,9 +84,9 @@ const MovieDetails = ({route, navigation}) => {
           onpress={addMovie}
         />
         {movies &&
-          movies.map((item, index) =>
+          movies.map((item, key) =>
             item.imdbID === id ? (
-              <View style={{padding: 16}} key={index}>
+              <View style={{padding: 16}} key={key}>
                 <Image
                   source={{uri: item.Poster !== '' ? item.Poster : undefined}}
                   style={{
@@ -180,9 +180,9 @@ const MovieDetails = ({route, navigation}) => {
                     </View>
                   ) : index === 1 ? (
                     <View>
-                      {item.Reviews.map((review, index) => {
+                      {item.Reviews.map(review => {
                         return (
-                          <View style={styles.ReContainer} key={index}>
+                          <View style={styles.ReContainer}>
                             <View style={styles.rImg}>
                               <Image
                                 source={review.uri}
