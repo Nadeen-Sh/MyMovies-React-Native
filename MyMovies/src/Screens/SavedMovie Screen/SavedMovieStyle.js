@@ -39,4 +39,30 @@ export default StyleSheet.create({
     lineHeight: 19,
     color: '#92929D',
   },
+  movieResult: {
+    display: 'flex',
+    flexDirection: 'row',
+    width: 327,
+    paddingTop: 10,
+  },
+  title: {
+    color: themeStyle.colors.PRIMARY_COLOR,
+    fontSize: themeStyle.font.FONT_SIZE,
+    fontWeight: themeStyle.font.FONT_WEIGHT,
+    fontFamily: 'Poppins',
+    fontStyle: 'normal',
+    lineHeight: 27,
+  },
+  details: {
+    paddingLeft: 30,
+    paddingTop: 18,
+  },
+  rating: {
+    paddingLeft: 8,
+    color: themeStyle.colors.PRIMARY_COLOR,
+    fontSize: 12,
+  },
+  colorRating: {
+    color: '#FF8700',
+  },
 });

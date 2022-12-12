@@ -1,8 +1,10 @@
 import * as React from 'react';
-import {View, Text, Image, ScrollView, FlatList} from 'react-native';
+import {View, Text, Image, ScrollView} from 'react-native';
 import AppBarComponent from '../../components/AppBar Component/AppBarComponent';
 import styles from './SavedMovieStyle';
 import {openDatabase} from 'react-native-sqlite-storage';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import Card from '../../components/Card Component/Card';
 
 const db = openDatabase({
   name: 'rn_sqlite',
@@ -14,19 +16,29 @@ const SavedMovies = ({navigation}) => {
   const getMovies = () => {
     db.transaction(txn => {
       txn.executeSql(
-        `SELECT * FROM movies ORDER BY id DESC`,
+        `SELECT * FROM watchList ORDER BY id DESC`,
         [],
         (sqlTxn, res) => {
-          console.log('movies retrieved successfully');
+          console.log('savedMovies retrieved successfully');
           let len = res.rows.length;
 
           if (len > 0) {
             let results = [];
             for (let i = 0; i < len; i++) {
               let item = res.rows.item(i);
-              results.push({id: item.id, name: item.name});
+              results.push({
+                id: item.id,
+                idmbId: item.idmbId,
+                title: item.title,
+                img: item.img,
+                poster: item.poster,
+                rate: item.rate,
+                year: item.year,
+                genre: item.genre,
+                time: item.time,
+              });
             }
-
+            console.log(results);
             setResult(results);
           }
         },
@@ -51,8 +63,64 @@ const SavedMovies = ({navigation}) => {
 
         {result.length !== 0 ? (
           <View>
-            {result.map(item => {
-              return <Text>{item.name}</Text>;
+            {result.map((item, index) => {
+              return (
+                <View style={styles.movieResult}>
+                  <View>
+                    <Card
+                      key={index}
+                      image={item.img}
+                      height={145.92}
+                      width={100}
+                      raduis={16}
+                      onClick={() =>
+                        navigation.navigate('details', {id: item.idmbId})
+                      }
+                    />
+                  </View>
+                  <View style={styles.details}>
+                    <Text style={styles.title}>{item.title}</Text>
+                    <View style={styles.movieResult}>
+                      <Icon
+                        type="EvilIcons"
+                        name="star"
+                        color="#FF8700"
+                        size={15}
+                      />
+                      <Text style={[styles.rating, styles.colorRating]}>
+                        {item.rate}
+                      </Text>
+                    </View>
+                    <View style={styles.movieResult}>
+                      <Icon
+                        type="EvilIcons"
+                        name="calendar"
+                        color="#FFFFFF"
+                        size={15}
+                      />
+                      <Text style={styles.rating}>{item.year}</Text>
+                    </View>
+                    <View style={styles.movieResult}>
+                      <Icon
+                        type="EvilIcons"
+                        name="film"
+                        color="#FFFFFF"
+                        size={15}
+                      />
+                      <Text style={styles.rating}>{item.genre}</Text>
+                    </View>
+                    <View style={styles.movieResult}>
+                      <Icon
+                        type="EvilIcons"
+                        name="clock-o"
+                        color="#FFFFFF"
+                        size={15}
+                      />
+                      <Text style={styles.rating}>{item.time}</Text>
+                    </View>
+                  </View>
+                </View>
+              );
             })}
           </View>
         ) : (

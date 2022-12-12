@@ -24,7 +24,7 @@ const MovieDetails = ({route, navigation}) => {
   const createTables = () => {
     db.transaction(txn => {
       txn.executeSql(
-        `CREATE TABLE IF NOT EXISTS movies (id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR(20))`,
+        `CREATE TABLE IF NOT EXISTS watchList (id INTEGER PRIMARY KEY AUTOINCREMENT, imdbId VARCHAR(20), title VARCHAR(20), img TEXT, poster TEXT, rate VARCHAR(20),year VARCHAR(20),genre VARCHAR(20), time VARCHAR(20))`,
         [],
         (sqlTxn, res) => {
           console.log('table created successfully');
@@ -36,19 +36,18 @@ const MovieDetails = ({route, navigation}) => {
     });
   };
 
-  const addMovie = () => {
-    if (!id) {
+  const addMovie = (e, imdbId, title, img, poster, rate, year, genre, time) => {
+    if (!imdbId) {
       alert('Enter id');
       return false;
     }
 
     db.transaction(txn => {
       txn.executeSql(
-        `INSERT INTO movies (name) VALUES (?)`,
-        [id],
+        `INSERT INTO watchList (imdbId,title,img,poster,rate,year,genre,time) VALUES (?,?,?,?,?,?,?,?)`,
+        [imdbId, title, img, poster, rate, year, genre, time],
         (sqlTxn, res) => {
-          console.log(`${id} id added successfully`);
-          getCategories();
+          console.log(`${id}/${title}/${rate} added successfully `);
         },
         error => {
           console.log('error on adding id ' + error.message);
@@ -64,7 +63,7 @@ const MovieDetails = ({route, navigation}) => {
           icon="bookmark"
           goback={() => navigation.goBack()}
           Title="Detail"
-          onpress={saved}
+          onpress={createTables}
         />
         {movies &&
           movies.map(item =>
@@ -90,6 +89,23 @@ const MovieDetails = ({route, navigation}) => {
                   />
                   <Text style={{paddingLeft: 3}}>{item.imdbRating}</Text>
                 </View>
+                <Button
+                  title="saved"
+                  onPress={e =>
+                    addMovie(
+                      e,
+                      item.imdbID,
+                      item.Title,
+                      item.image,
+                      item.Poster,
+                      item.imdbRating,
+                      item.Year,
+                      item.Genre,
+                      item.Runtime,
+                    )
+                  }
+                  color="red"
+                />
                 <View style={styles.movieTitleContainer}>
                   <Text style={styles.movieTitle}>{item.Title}</Text>
                 </View>
