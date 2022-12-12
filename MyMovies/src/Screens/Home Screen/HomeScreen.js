@@ -9,7 +9,7 @@ import {
 import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from './HomeStyle';
 import movies from '../../Film';
-import {Tab, TabView} from '@rneui/themed';
+import {Tab} from '@rneui/themed';
 import Card from '../../components/Card Component/Card';
 
 const HomeScreen = ({navigation}) => {

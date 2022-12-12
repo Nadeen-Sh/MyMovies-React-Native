@@ -1,7 +1,6 @@
 export default {
   colors: {
     PRIMARY_COLOR: '#FFFFFF',
-    YELLOW_COLOR: '#e1c400',
     BLACK_COLOR: '#000000',
   },
   font: {
