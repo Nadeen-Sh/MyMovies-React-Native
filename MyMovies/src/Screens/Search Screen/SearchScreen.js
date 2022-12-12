@@ -13,9 +13,12 @@ import styles from './SearchStyle';
 import Card from '../../components/Card Component/Card';
 import AppBarComponent from '../../components/AppBar Component/AppBarComponent';
 
-const SearchScreen = ({navigation}) => {
+const SearchScreen = ({route, navigation}) => {
+  const {id} = route.params;
+  console.log(route.params);
   const [search, setSearch] = React.useState('');
   const [result, setResult] = React.useState([]);
+
   const searchMovie = () => {
     const filterd = movies.filter(item => {
       return (
@@ -27,6 +30,16 @@ const SearchScreen = ({navigation}) => {
 
     setResult(filterd);
   };
+
+  React.useEffect(() => {
+    if (id) {
+      setSearch(id);
+    }
+  }, []);
+
+  React.useEffect(() => {
+    searchMovie();
+  }, [search]);
 
   return (
     <ScrollView>

@@ -36,7 +36,12 @@ const HomeScreen = ({navigation}) => {
             placeholder="Search ..."
           />
           <TouchableOpacity
-            onPress={() => navigation.navigate('search')}
+            onPress={() =>
+              navigation.navigate('search', {
+                screen: 'search',
+                params: {id: search},
+              })
+            }
             style={styles.searchIcon}>
             <Icon type="EvilIcons" name="search" color="#67686D" size={30} />
           </TouchableOpacity>

@@ -30,7 +30,7 @@ const MovieDetails = ({route, navigation}) => {
   const createTables = () => {
     db.transaction(txn => {
       txn.executeSql(
-        `CREATE TABLE IF NOT EXISTS WtchList (id INTEGER PRIMARY KEY AUTOINCREMENT, imdbId VARCHAR(20), title VARCHAR(20), img TEXT, poster TEXT, rate VARCHAR(20),year VARCHAR(20),genre VARCHAR(20), time VARCHAR(20))`,
+        `CREATE TABLE IF NOT EXISTS MwatchList (id INTEGER PRIMARY KEY AUTOINCREMENT, imdbId VARCHAR(20), title VARCHAR(20), img TEXT, poster TEXT, rate VARCHAR(20),year VARCHAR(20),genre VARCHAR(20), time VARCHAR(20))`,
         [],
         (sqlTxn, res) => {
           console.log('table created successfully');
@@ -62,7 +62,7 @@ const MovieDetails = ({route, navigation}) => {
 
     db.transaction(txn => {
       txn.executeSql(
-        `INSERT INTO WtchList (imdbId,title,img,poster,rate,year,genre,time) VALUES (?,?,?,?,?,?,?,?)`,
+        `INSERT INTO MwatchList (imdbId,title,img,poster,rate,year,genre,time) VALUES (?,?,?,?,?,?,?,?)`,
         [imdbId, title, img, poster, rate, year, genre, time],
         (sqlTxn, res) => {
           console.log(`${title} added successfully `);
