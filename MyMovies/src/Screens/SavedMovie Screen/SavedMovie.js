@@ -38,7 +38,7 @@ const SavedMovies = ({navigation}) => {
                 time: item.time,
               });
             }
-            console.log(results);
+
             setResult(results);
           }
         },
@@ -65,7 +65,7 @@ const SavedMovies = ({navigation}) => {
           <View>
             {result.map((item, index) => {
               return (
-                <View style={styles.movieResult}>
+                <View style={styles.movieResult} key={index}>
                   <View>
                     <Card
                       key={index}
@@ -74,12 +74,23 @@ const SavedMovies = ({navigation}) => {
                       width={100}
                       raduis={16}
                       onClick={() =>
-                        navigation.navigate('details', {id: item.idmbId})
+                        navigation.navigate('home', {
+                          screen: 'details',
+                          params: {id: item.imdbID},
+                        })
                       }
                     />
                   </View>
                   <View style={styles.details}>
                     <Text style={styles.title}>{item.title}</Text>
+                    <Text
+                      style={{
+                        borderColor: 'red',
+                        borderWidth: 3,
+                        color: 'white',
+                      }}>
+                      {item.imdbID}
+                    </Text>
                     <View style={styles.movieResult}>
                       <Icon
                         type="EvilIcons"

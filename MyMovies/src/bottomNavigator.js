@@ -48,15 +48,15 @@ const BottomTabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="watch list"
-        component={SevedStackNavigator}
+        name="search"
+        component={SearchStackNavigator}
         options={{
           unmountOnBlur: true,
         }}
       />
       <Tab.Screen
-        name="search"
-        component={SearchStackNavigator}
+        name="watch list"
+        component={SevedStackNavigator}
         options={{
           unmountOnBlur: true,
         }}

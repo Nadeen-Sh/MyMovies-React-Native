@@ -75,7 +75,7 @@ export default movies = [
       'https://images-na.ssl-images-amazon.com/images/M/MV5BMTMwNTg5MzMwMV5BMl5BanBnXkFtZTcwMzA2NTIyMw@@._V1_SX1777_CR0,0,1777,937_AL_.jpg',
     Metascore: '52',
     imdbRating: '7.7',
-    imdbVotes: '611,046',
+
     imdbID: 'tt0416449',
     Type: 'movie',
     Response: 'True',
@@ -338,8 +338,7 @@ export default movies = [
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj3WpDfSYSfESOyMQIThwsSh5YXBhI7-f5hQ&usqp=CAU',
 
     imdbRating: '8.9',
-    imdbVotes: '118,680',
-
+    imdbID: 'tt2707408',
     popular: 'True',
     image: 'https://m.media-amazon.com/images/I/81AHTLxNdFL._AC_UY218_.jpg',
     Reviews: [

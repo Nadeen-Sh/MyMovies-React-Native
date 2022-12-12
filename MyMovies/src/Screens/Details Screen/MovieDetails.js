@@ -13,7 +13,7 @@ const db = openDatabase({
 
 const MovieDetails = ({route, navigation}) => {
   const {id} = route.params;
-  console.log(id);
+
   const [index, setIndex] = React.useState(0);
 
   const saved = async () => {
@@ -66,9 +66,9 @@ const MovieDetails = ({route, navigation}) => {
           onpress={createTables}
         />
         {movies &&
-          movies.map(item =>
+          movies.map((item, index) =>
             item.imdbID === id ? (
-              <View style={{padding: 16}}>
+              <View style={{padding: 16}} key={index}>
                 <Image
                   source={{uri: item.Poster !== '' ? item.Poster : undefined}}
                   style={{
@@ -178,9 +178,9 @@ const MovieDetails = ({route, navigation}) => {
                     </View>
                   ) : index === 1 ? (
                     <View>
-                      {item.Reviews.map(review => {
+                      {item.Reviews.map((review, index) => {
                         return (
-                          <View style={styles.ReContainer}>
+                          <View style={styles.ReContainer} key={index}>
                             <View style={styles.rImg}>
                               <Image
                                 source={review.uri}
