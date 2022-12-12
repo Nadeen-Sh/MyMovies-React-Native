@@ -1,14 +1,7 @@
 import * as React from 'react';
 import {View, Image} from 'react-native';
 
-const Start = ({navigation}) => {
-  React.useEffect(() => {
-    setTimeout(goHome, 700);
-  }, []);
-
-  const goHome = () => {
-    navigation.navigate('home');
-  };
+const Start = () => {
   return (
     <View
       style={{
