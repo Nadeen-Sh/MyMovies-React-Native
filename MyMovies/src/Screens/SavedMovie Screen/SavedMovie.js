@@ -19,7 +19,7 @@ const SavedMovies = ({navigation}) => {
         `SELECT * FROM watchList ORDER BY id DESC`,
         [],
         (sqlTxn, res) => {
-          console.log('savedMovies retrieved successfully');
+          console.log('watchList retrieved successfully');
           let len = res.rows.length;
 
           if (len > 0) {

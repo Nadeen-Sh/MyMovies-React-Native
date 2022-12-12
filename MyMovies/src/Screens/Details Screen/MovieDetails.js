@@ -38,7 +38,7 @@ const MovieDetails = ({route, navigation}) => {
 
   const addMovie = (e, imdbId, title, img, poster, rate, year, genre, time) => {
     if (!imdbId) {
-      alert('Enter id');
+      alert('Error saving');
       return false;
     }
 
@@ -47,10 +47,10 @@ const MovieDetails = ({route, navigation}) => {
         `INSERT INTO watchList (imdbId,title,img,poster,rate,year,genre,time) VALUES (?,?,?,?,?,?,?,?)`,
         [imdbId, title, img, poster, rate, year, genre, time],
         (sqlTxn, res) => {
-          console.log(`${id}/${title}/${rate} added successfully `);
+          console.log(`${title} added successfully `);
         },
         error => {
-          console.log('error on adding id ' + error.message);
+          console.log('error on adding movie ' + error.message);
         },
       );
     });
