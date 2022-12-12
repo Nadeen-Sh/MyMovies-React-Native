@@ -14,26 +14,31 @@ import Card from '../../components/Card Component/Card';
 import AppBarComponent from '../../components/AppBar Component/AppBarComponent';
 
 const SearchScreen = ({route, navigation}) => {
-  const {id} = route.params;
-  console.log(route.params);
   const [search, setSearch] = React.useState('');
   const [result, setResult] = React.useState([]);
 
   const searchMovie = () => {
-    const filterd = movies.filter(item => {
-      return (
-        item.Title.toLowerCase().includes(search.toLowerCase()) ||
-        item.Genre.toLowerCase().includes(search.toLowerCase()) ||
-        item.Year.includes(search)
-      );
-    });
+    if (search) {
+      const filterd = movies.filter(item => {
+        return (
+          item.Title.toLowerCase().includes(search.toLowerCase()) ||
+          item.Genre.toLowerCase().includes(search.toLowerCase()) ||
+          item.Year.includes(search)
+        );
+      });
 
-    setResult(filterd);
+      setResult(filterd);
+    }
   };
 
   React.useEffect(() => {
-    if (id) {
-      setSearch(id);
+    if (route.params !== undefined) {
+      const {id} = route.params;
+      if (id) {
+        setSearch(id);
+      }
+    } else {
+      setSearch('');
     }
   }, []);
 
