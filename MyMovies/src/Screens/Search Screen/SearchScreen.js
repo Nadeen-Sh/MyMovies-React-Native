@@ -137,7 +137,6 @@ const SearchScreen = ({route, navigation}) => {
               style={{
                 height: 86,
                 width: 86,
-                color: 'red',
               }}
             />
             <Text style={styles.noResultText}>

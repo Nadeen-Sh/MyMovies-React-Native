@@ -208,12 +208,7 @@ const MovieDetails = ({route, navigation}) => {
                                 {review.rate}
                               </Text>
                             </View>
-                            <View
-                              tyle={{
-                                display: 'flex',
-                                flexDirection: 'column',
-                                alignItems: 'flex-end',
-                              }}>
+                            <View>
                               <Text style={styles.name}>{review.name}</Text>
                               <Text style={[styles.review]}>
                                 {review.review}
