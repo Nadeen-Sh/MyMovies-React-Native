@@ -78,7 +78,10 @@ const SearchScreen = ({route, navigation}) => {
                       width={100}
                       raduis={16}
                       onClick={() =>
-                        navigation.navigate('details', {id: item.imdbID})
+                        navigation.navigate('home', {
+                          screen: 'details',
+                          params: {id: item.imdbID, name: 'search'},
+                        })
                       }
                     />
                   </View>

@@ -13,6 +13,7 @@ const db = openDatabase({
 
 const MovieDetails = ({route, navigation}) => {
   const {id} = route.params;
+  const screen = route.params.name;
   const [index, setIndex] = React.useState(0);
   const [imdbId, setImdbId] = React.useState('');
   const [title, setTitle] = React.useState('');
@@ -36,8 +37,8 @@ const MovieDetails = ({route, navigation}) => {
           console.log('table created successfully');
           movies.map(item => {
             if (item.imdbID === id) {
+              setImdbId(id);
               setTitle(item.Title);
-              setImdbId(item.imdbID);
               setImg(item.image);
               setPoster(item.Poster);
               setRate(item.imdbRating);
@@ -65,7 +66,7 @@ const MovieDetails = ({route, navigation}) => {
         `INSERT INTO MwatchList (imdbId,title,img,poster,rate,year,genre,time) VALUES (?,?,?,?,?,?,?,?)`,
         [imdbId, title, img, poster, rate, year, genre, time],
         (sqlTxn, res) => {
-          console.log(`${title} added successfully `);
+          console.log(`${imdbId} added successfully `);
         },
         error => {
           console.log('error on adding movie ' + error.message);
@@ -79,7 +80,15 @@ const MovieDetails = ({route, navigation}) => {
       <View>
         <AppBarComponent
           icon="bookmark"
-          goback={() => navigation.goBack()}
+          goback={() =>
+            navigation.goBack()
+              ? navigation.goBack()
+              : screen === 'saved'
+              ? navigation.navigate('watch list')
+              : screen === 'search'
+              ? navigation.navigate('search')
+              : navigation.navigate('home')
+          }
           Title="Detail"
           onpress={addMovie}
         />

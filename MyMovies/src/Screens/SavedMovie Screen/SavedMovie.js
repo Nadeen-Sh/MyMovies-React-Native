@@ -28,7 +28,7 @@ const SavedMovies = ({navigation}) => {
               let item = res.rows.item(i);
               results.push({
                 id: item.id,
-                idmbId: item.idmbId,
+                imdbId: item.imdbId,
                 title: item.title,
                 img: item.img,
                 poster: item.poster,
@@ -73,13 +73,11 @@ const SavedMovies = ({navigation}) => {
                       height={145.92}
                       width={100}
                       raduis={16}
-                      onClick={
-                        () => {}
-                        // navigation.navigate('home', {
-                        //   screen: 'details',
-                        //   params: {id: item.imdbID},
-                        // }
-                        // )
+                      onClick={() =>
+                        navigation.navigate('home', {
+                          screen: 'details',
+                          params: {id: item.imdbId, name: 'saved'},
+                        })
                       }
                     />
                   </View>
