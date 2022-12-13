@@ -22,19 +22,25 @@ People spend considerable time on internet to choose a good movie . We provide a
 
 #### DataBase:
   * SqlLite
+      - used sqllite foe saving movies:
+      - store saving movies details in watchlist table.
+      - get movies details to watch list screen. 
 
 
 ## Screens:
 
 <div style={{alignItems: "center"}}>
 <div style={{flex: "row"}}>
+ <img src="https://user-images.githubusercontent.com/48320569/207383431-0645f90d-44dd-48e3-83bf-f7f1d4d4be69.jpg" width="140" height="300" />
 <img src="https://user-images.githubusercontent.com/48320569/206945001-c18dc860-13d9-48dd-8e3f-4ff29a135eab.jpg" width="140" height="300" />
 <img src="https://user-images.githubusercontent.com/48320569/206945038-0cd4dd10-3715-4d94-b4ad-596f7592025c.jpg" width="140" height="300" />
 <img src="https://user-images.githubusercontent.com/48320569/206945148-e0c68645-ba32-48bf-a667-82ab7eed7f16.jpg" width="140" height="300" />
 <img src="https://user-images.githubusercontent.com/48320569/206945181-3949bd59-3899-4f63-bc30-744c0190a802.jpg" width="140" height="300" />
 <img src="https://user-images.githubusercontent.com/48320569/206945239-472c3e1e-43d5-48ed-9445-7ff1e8296b08.jpg" width="140" height="300" />
+ <img src="https://user-images.githubusercontent.com/48320569/207383269-95536406-d602-46e6-9805-9a9cf4b10c6a.jpg" width="140" height="300" />
 </div>
 </div>
+
 
 
 
